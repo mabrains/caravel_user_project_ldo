@@ -84,9 +84,9 @@ The typical conditions are tt corner ,load of 50uA, T=27°C , VDD=2.3V , We have
   Specification  |      TT                  
 -----------------| ---------------
 Temperature Coeffiecient   | 49.4 ppm/°C
-Dropout Voltage            | 0.211mV @IL=0.1mA
-                           |  85.6mV @IL=10mA
-                           |  168.45mV @IL=100mA
+Dropout Voltage @IL=0.1mA  | 0.211mV 
+Dropout Voltage @IL=10mA   |  85.6mV @IL=10mA
+Dropout Voltage @IL=100mA  |  168.45mV @IL=100mA
 Line Regulation            | 0.0325 mv/v
 Load Regulation            | 0.06mV    IL=0.1mA till IL=10mA
 PSRR @ 100Hz               | 88.1dB
