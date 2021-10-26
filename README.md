@@ -14,5 +14,4 @@ The implementation of the LDO is as follows.
 
 
 ## Analog User Project Documentation
-
 Refer to [README](docs/source/index.rst) for this sample project documentation. 
