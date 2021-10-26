@@ -63,7 +63,7 @@ We used transient analysis to show the line transient by varying the supply from
 When VDD varies from 0 to 2.3v
 ![Image of LDO_Transient](https://github.com/mabrains/Analog_blocks/blob/main/Analog_Blocks/LDO/Images/LDO_v2/tran02.3v.png)
 When VDD varies from 2 to 3v
-![Image of LDO_Transient](https://github.com/mabrains/Analog_blocks/blob/main/Analog_Blocks/LDO/Images/LDO_v2/line_trantran2v3v.png)
+![Image of LDO_Transient](https://github.com/mabrains/Analog_blocks/blob/main/Analog_Blocks/LDO/Images/LDO_v2/line_tran_2v3v.png)
 
 ## Load Transient 
 The load is varied from 0.1mA to 10mA where the load is modeled as current source varied as PWL source where the output voltage suffers from under shoot of 40mV due to change of load current from 0.1mA to 10mA in 10uS then it settles back to its original value so we used this analysis to measure the load regulation. 
