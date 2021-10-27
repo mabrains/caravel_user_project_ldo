@@ -55,8 +55,8 @@ We used AC analysis by injecting small ac signal over the supply and plotted the
 ![Image of LDO_PSRR](https://github.com/mabrains/Analog_blocks/blob/main/Analog_Blocks/LDO/Images/LDO_v2/psrr50u.png)
 ### Stability analysis
 We made the above testbench to cut the feedback loop of the ldo and inject ac signal and then measure the loop gain and phase to find phase margin.
-## d. Transient analysis
 
+### d. Transient analysis
 #### Line Transient 
 We used transient analysis to show the line transient by varying the supply from 0 to vdd where the nominal supply voltage is 2.3v.
 When VDD varies from 0 to 2.3v
