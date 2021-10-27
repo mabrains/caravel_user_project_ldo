@@ -3,13 +3,12 @@
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) [![CI](https://github.com/efabless/caravel_user_project_analog/actions/workflows/user_project_ci.yml/badge.svg)](https://github.com/efabless/caravel_user_project_analog/actions/workflows/user_project_ci.yml) [![Caravan Build](https://github.com/efabless/caravel_user_project_analog/actions/workflows/caravan_build.yml/badge.svg)](https://github.com/efabless/caravel_user_project_analog/actions/workflows/caravan_build.yml)
 
 
-
-## LDO Design
 This is a caravel that has an LDO Design implemented on Skywaters 130nm technology.
 
+## Circuit Design
+The implementation of the LDO is as follows
 
-
-# LDO Simulation
+## LDO Simulation
 
 We have an enable switch so all the following analysis when the enable signal is high.
 
@@ -96,10 +95,8 @@ Phase Margin               | 50.1°
 Quiescent Current          | 130uA
 Startup time               | 7uS
 
-### Circuit Design
-The implementation of the LDO is as follows.
 
-### Layout Design
+## Layout Design
 
 
 ## Analog User Project Documentation
