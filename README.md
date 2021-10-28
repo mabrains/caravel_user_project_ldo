@@ -8,15 +8,10 @@ This is a caravel that has an LDO Design implemented on Skywaters 130nm technolo
 
 ## Circuit Design
 The implementation of the LDO version 1 is as follows:
-
 The pins are integrated in caravel as follows:
-
 Enable pin is connected to io_in_3v3[14].
-
-GND pin is connected to io_analog[7].
-
+GND pin is connected to io_analog[7]
 VDD pin is connected to io_analog[6].
-
 ldo_out pin is connected to io_analog[5].
 
 ### Schematic
@@ -38,7 +33,7 @@ We have an enable switch so all the following analysis when the enable signal is
 
 ### a. DC analysis
 
-We used dc analysis for displaying the operating point for proper biasing of transistors and also dc sweep of output voltage against variations in supply and temprature to calculate dropout voltage,line regulation,temperature coefficient.
+We used dc analysis for displaying the operating point for proper biasing of transistors and also dc sweep of output voltage against variations in supply and temperature to calculate dropout voltage,line regulation,temperature coefficient.
 
 ### Supply variation
 We made dc sweep on the supply and plotted voltage of the output node and vdd node overlaid on the same plot
@@ -108,7 +103,7 @@ Startup time               | 7uS
 
 
 ## Layout Design
-
+![Image of layout_version_1](https://github.com/mabrains/Analog_blocks/blob/main/Analog_Blocks/LDO/Images/LDO_v2/ldo_v1_layout.png)
 
 ## Analog User Project Documentation
 
@@ -125,13 +120,9 @@ Refer to [README](docs/source/index.rst) for this sample project documentation.
 The implementation of the LDO version 2 is as follows:
 
 The pins are integrated in caravel as follows:
-
 Enable pin is connected to io_in_3v3[12].
-
 GND pin is connected to io_analog[0]
-
 VDD pin is connected to io_analog[4].
-
 ldo_out pin is connected to io_analog[2,3]: we used two available thin pads connected to each other to be able to carry high currents.
 
 
@@ -224,7 +215,7 @@ Startup time               | 1.3uS
 
 
 ## Layout Design
-
+![Image of layout_version_2](https://github.com/mabrains/Analog_blocks/blob/main/Analog_Blocks/LDO/Images/LDO_v2/ldo_v2_layout.png)
 
 ## Analog User Project Documentation
 
