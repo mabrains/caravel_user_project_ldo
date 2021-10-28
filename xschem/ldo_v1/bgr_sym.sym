@@ -1,0 +1,28 @@
+v {xschem version=2.9.9 file_version=1.2 }
+G {}
+K {type=subcircuit
+format="@name @pinlist @symname"
+template="name=x1"}
+V {}
+S {}
+E {}
+L 4 890 -950 1000 -950 {}
+L 4 1000 -950 1000 -890 {}
+L 4 890 -890 1000 -890 {}
+L 4 890 -950 890 -890 {}
+L 4 930 -970 930 -950 {}
+L 4 930 -890 930 -880 {}
+L 4 1000 -930 1040 -930 {}
+L 4 1000 -910 1040 -910 {}
+L 4 850 -920 890 -920 {}
+B 5 927.5 -972.5 932.5 -967.5 {name=avdd
+dir=inout}
+B 5 1037.5 -932.5 1042.5 -927.5 {name=bg_out
+dir=out}
+B 5 927.5 -882.5 932.5 -877.5 {name=agnd
+dir=inout}
+B 5 1037.5 -912.5 1042.5 -907.5 {name=iref
+dir=out}
+B 5 847.5 -922.5 852.5 -917.5 {name=en
+dir=inout}
+T {@name} 920 -930 0 0 0.2 0.2 {}

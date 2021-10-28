@@ -1,0 +1,4 @@
+**.subckt Error_Amp
+**.ends
+** flattened .save nodes
+.end
