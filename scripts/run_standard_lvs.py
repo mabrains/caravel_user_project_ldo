@@ -24,12 +24,15 @@ import re
 
 # Work in progress
 
-def run_full_lvs(layout_name, output_file,compare_netlist,report_file,cell_name="default"):
+def run_full_lvs(layout_file, layout_netlist_file, sch_netlist_file, report_file, layout_top_cell, sch_top_cell):
+    # un_full_lvs(layout_file=arguments[0], layout_netlist_file=arguments[1], sch_netlist=arguments[2], report_file=arguments[3], 
+    #            layout_top_cell=arguments[4], sch_top_cell=arguments[5])
+
+    sch_netlist_file = os.path.abspath(sch_netlist_file)
+
     is_gds = False
-    if cell_name == "default":
-        cell_name = layout_name
     # Remove any extension from layout_name
-    layout_root = layout_name
+    layout_root = layout_file
     layout_name = os.path.splitext(layout_root)[0]
     layout_ext = os.path.splitext(layout_root)[1]
 
@@ -77,8 +80,6 @@ def run_full_lvs(layout_name, output_file,compare_netlist,report_file,cell_name=
             else:
                 magpath = os.getcwd()
 
-    if output_file == '':
-        output_file = layout_name + '_drc.txt'
 
     # Check for presence of a .magicrc file, or else check for environment
     # variable PDKPATH, or PDK_PATH
@@ -122,14 +123,14 @@ def run_full_lvs(layout_name, output_file,compare_netlist,report_file,cell_name=
             print('gds flatglob *__example_*', file=ofile)
             print('gds flatten true', file=ofile)
             print('gds read ' + gdspath + '/' + layout_name, file=ofile)
-            print('load ' + cell_name, file=ofile)
+            print('load ' + layout_top_cell, file=ofile)
         else:
             print('load ' + layout_name + ' -dereference', file=ofile)
         print('select top cell', file=ofile)
         print('expand', file=ofile)
         print('extract all', file=ofile)
         print('ext2spice lvs', file=ofile)
-        print('ext2spice -M -o ' + output_file, file=ofile)
+        print('ext2spice -M -o ' + layout_netlist_file, file=ofile)
         # print('set ofile [open ' + output_file + ' w]', file=ofile)
         # print('puts $ofile "DRC errors for cell ' + cell_name + '"', file=ofile)
         # print('puts $ofile "--------------------------------------------"', file=ofile)
@@ -171,9 +172,9 @@ def run_full_lvs(layout_name, output_file,compare_netlist,report_file,cell_name=
 
     print('Done! magic extraction')
     ##netgen part 
-    netgen_run = subprocess.run(['netgen', '-batch', 'lvs',output_file,compare_netlist,
-		netgenset, report_file],
-        env = myenv, cwd = magpath,
+    netgen_run = subprocess.run(['netgen','-batch lvs "{} {}" "{} {}" {} {}'.format(layout_netlist_file, layout_top_cell,
+                                 sch_netlist_file, sch_top_cell, netgenset, report_file)],
+                env = myenv, cwd = magpath,
 		stdin = subprocess.DEVNULL, stdout = subprocess.PIPE,
 		stderr = subprocess.PIPE, universal_newlines = True)
 
@@ -212,11 +213,12 @@ if __name__ == '__main__':
     elif len(arguments) > 2:
         out_filename = arguments[1]
 
-
-    if len(arguments) > 0 and len(arguments) < 6:
-        run_full_lvs(layout_name=arguments[0], output_file=arguments[1],compare_netlist=arguments[2],report_file=arguments[3],cell_name=arguments[4])
+    # python scripts/run_standard_lvs.py gds/ldo_v1/ldo_flattened_f.gds extracted.spi xschem/ldo_v1/ldo_v1_lvs.spice report.lvs ldo_flattened_f ldo_v1_lvs
+    if len(arguments) > 0 and len(arguments) < 7:
+        run_full_lvs(layout_file=arguments[0], layout_netlist_file=arguments[1], sch_netlist_file=arguments[2], report_file=arguments[3], 
+                layout_top_cell=arguments[4], sch_top_cell=arguments[5])
     else:
-        print("Usage:  run_standard_drc.py <layout_name> [<output_file>] [options]")
+        print("Usage:  run_standard_lvs.py <layout_file>  [<output_file>] [options]")
         print("Options:")
         print("   (none)")
     

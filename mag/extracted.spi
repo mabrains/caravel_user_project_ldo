@@ -1,7 +1,0 @@
-* NGSPICE file created from ldo_flattened_f.ext - technology: sky130A
-
-
-* Top level circuit ldo_flattened_f
-
-.end
-

@@ -1,4 +1,6 @@
-**.subckt ldo_v1_lvs in en ldo_out
+** ldo_v1_lvs
+
+.subckt ldo_v1_lvs in en ldo_out
 *.ipin in
 *.ipin en
 *.opin ldo_out
@@ -11,7 +13,7 @@ XR2 pos net3 GND sky130_fd_pr__res_xhigh_po_0p69 L=24 mult=3 m=3
 XR3 net3 ldo_out GND sky130_fd_pr__res_xhigh_po_0p69 L=24 mult=8 m=8
 XR1 net4 pos GND sky130_fd_pr__res_xhigh_po_0p69 L=24 mult=2 m=2
 XR4 GND net4 GND sky130_fd_pr__res_xhigh_po_0p69 L=24 mult=4 m=4
-**.ends
+.ends
 
 * expanding   symbol:  bgr_sym.sym # of pins=5
 * sym_path: /home/mustafa/mabrains/caravel_user_project_ldo/xschem/ldo_v1/bgr_sym.sym
