@@ -158,7 +158,7 @@ We made dc sweep on temperature from 0 to 85°C and plotted the output voltage v
 #### PSRR
 We used AC analysis by injecting small ac signal over the supply and plotted the output voltage in dB which refers to the PSRR vs Frequency.
 
-![Image of LDO_PSRR](https://github.com/mabrains/Analog_blocks/blob/main/Analog_Blocks/LDO/Images/LDO_v2/psrr50uv2.png)
+![Image of LDO_PSRR](https://github.com/mabrains/Analog_blocks/blob/main/Analog_Blocks/LDO/Images/LDO_v2/psrr_50uv2.png)
 ### Stability analysis
 We made the above testbench to cut the feedback loop of the ldo and inject ac signal and then measure the loop gain and phase to find phase margin.
 
