@@ -263,8 +263,6 @@ N 1610 -1250 1720 -1250 { lab=GND}
 N 1610 -1250 1610 -990 { lab=GND}
 N 660 -1420 770 -1420 { lab=VDD}
 N 680 -990 850 -990 { lab=GND}
-N 2670 -1420 2670 -1360 { lab=VDD}
-N 2600 -1420 2670 -1420 { lab=VDD}
 N 1640 -1210 1640 -1200 { lab=#net14}
 N 1640 -1140 1640 -1110 { lab=#net15}
 N 1890 -1220 1890 -1210 { lab=#net10}
@@ -732,7 +730,7 @@ plot load_current v(ldo_out)-1.8
 .control
 alter R10 36k
 alter @IL[PWL] = [ 0 0 10u 0 20u 0 30u 0 ]
-alter @Vs[pulse] = [ 1.8 3 10u 10u 1u 100u 200u ]
+alter @Vs[pulse] = [ 1 3 10u 10u 1u 100u 200u ]
 alter IL 0
 tran 0.1u 100u 
 plot vdd ldo_out
