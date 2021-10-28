@@ -221,7 +221,7 @@ Startup time               | 1.3uS
 
 Running LVS command:
 ```
-python3 scripts/run_standard_lvs.py gds/ldo_v1/ldo_flattened_f.gds.gz extracted.spi xschem/ldo_v1/ldo_v1_lvs.spice report.lvs ldo_flattened_f
+python scripts/run_standard_lvs.py gds/ldo_v1/ldo_flattened_f.gds extracted.spi xschem/ldo_v1/ldo_v1_lvs.spice report.lvs ldo_flattened_f ldo_v1_lvs
 ```
 
 Refer to [README](docs/source/index.rst) for this sample project documentation. 
