@@ -8,6 +8,11 @@ This is a caravel that has an LDO Design implemented on Skywaters 130nm technolo
 
 ## Circuit Design
 The implementation of the LDO version 1 is as follows:
+The pins are integrated in caravel as follows:
+Enable pin is connected to io_in_3v3[14].
+GND pin is connected to io_analog[7]
+VDD pin is connected to io_analog[6].
+ldo_out pin is connected to io_analog[5].
 
 ### Schematic
 
@@ -113,6 +118,13 @@ Refer to [README](docs/source/index.rst) for this sample project documentation.
 
 
 The implementation of the LDO version 2 is as follows:
+
+The pins are integrated in caravel as follows:
+Enable pin is connected to io_in_3v3[12].
+GND pin is connected to io_analog[0]
+VDD pin is connected to io_analog[4].
+ldo_out pin is connected to io_analog[2,3]: we used two available thin pads connected to each other to be able to carry high currents.
+
 
 ### Schematic
 
