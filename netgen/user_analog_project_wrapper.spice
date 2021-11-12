@@ -1,223 +1,341 @@
 * NGSPICE file created from user_analog_project_wrapper.ext - technology: sky130A
 
-.subckt sky130_fd_pr__cap_mim_m3_2_W5U4AW c2_n3079_n3000# m4_n3179_n3100# VSUBS
-X0 c2_n3079_n3000# m4_n3179_n3100# sky130_fd_pr__cap_mim_m3_2 l=3e+07u w=3e+07u
+.subckt ldo_v1 bg_out GND vb net4 net5 mir en net9 net11 net15 inn inp net17 net18
++ net19 pos VDD net6 ldo_out
+X0 GND net17 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X1 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X2 ldo_out a_6840912_n1929809# VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1e+07u l=500000u M=800
+X3 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X4 GND net18 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X5 net6 mir VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=3e+06u l=2e+06u M=8
+X6 net5 inp net4 GND sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=3e+06u l=1e+06u M=8
+X7 GND a_6893824_n1946282# GND sky130_fd_pr__res_xhigh_po w=690000u l=2.4e+07u
+X8 mir net5 VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=3e+06u l=2e+06u M=4
+X9 vb vb GND GND sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1e+06u l=1e+06u M=4
+X10 net4 inn mir GND sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=3e+06u l=1e+06u M=8
+X11 GND a_6827692_n1969205# mir GND sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=5e+06u l=500000u M=4
+X12 GND net17 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X13 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X14 GND net6 net4 GND sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=5e+06u l=2e+06u M=4
+X15 a_6881369_n1978314# vb GND GND sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1e+06u l=1e+06u M=8
+X16 GND net18 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X17 a_6840912_n1929809# a_6881543_n1973365# VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=3e+06u l=1.2e+06u M=12
+X18 GND net18 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X19 mir VDD sky130_fd_pr__cap_mim_m3_1 l=2e+07u w=2e+07u
+X20 net6 net6 GND GND sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=5e+06u l=2e+06u M=4
+X21 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X22 a_6892280_n1951526# ldo_out GND sky130_fd_pr__res_xhigh_po w=690000u l=2.4e+07u
+X23 VDD mir inp VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=3e+06u l=2e+06u M=8
+X24 a_6881543_n1973365# pos a_6881369_n1978314# GND sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=2e+06u l=1e+06u M=8
+X25 GND net17 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X26 a_6892280_n1951526# ldo_out GND sky130_fd_pr__res_xhigh_po w=690000u l=2.4e+07u
+X27 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X28 net15 inp GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X29 a_6827692_n1969205# bg_out GND GND sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=420000u l=2e+06u M=2
+X30 net11 inn GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X31 a_6881303_n1973391# bg_out a_6881369_n1978314# GND sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=2e+06u l=1e+06u M=8
+X32 a_6892280_n1951526# ldo_out GND sky130_fd_pr__res_xhigh_po w=690000u l=2.4e+07u
+X33 a_6840912_n1929809# vb GND GND sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1e+06u l=1e+06u M=12
+X34 a_6881303_n1973391# a_6881303_n1973391# VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=3e+06u l=1.2e+06u M=4
+X35 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X36 GND GND net9 sky130_fd_pr__pnp_05v5 area=0p M=-nan
+X37 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X38 a_6892280_n1951526# ldo_out GND sky130_fd_pr__res_xhigh_po w=690000u l=2.4e+07u
+X39 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X40 net9 net15 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X41 vb mir VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=3e+06u l=2e+06u M=4
+X42 VDD net5 net5 VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=3e+06u l=2e+06u M=4
+X43 a_6827692_n1969205# a_6827692_n1969205# a_6827544_n1967186# VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=420000u l=3e+06u M=2
+X44 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X45 VDD mir inn VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=3e+06u l=2e+06u M=8
+X46 GND a_6893824_n1946282# GND sky130_fd_pr__res_xhigh_po w=690000u l=2.4e+07u
+X47 GND net18 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X48 GND net18 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X49 GND net17 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X50 VDD a_6881303_n1973391# a_6881543_n1973365# VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=3e+06u l=1.2e+06u M=4
+X51 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X52 GND net17 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X53 GND net18 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X54 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X55 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X56 a_6892280_n1951526# ldo_out GND sky130_fd_pr__res_xhigh_po w=690000u l=2.4e+07u
+X57 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X58 GND net17 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X59 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X60 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X61 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X62 GND GND GND sky130_fd_pr__res_xhigh_po w=690000u l=2.4e+07u
+X63 net9 net15 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X64 VDD en mir VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=420000u l=500000u M=2
+X65 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X66 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X67 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X68 net9 net15 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X69 GND a_6893824_n1946282# GND sky130_fd_pr__res_xhigh_po w=690000u l=2.4e+07u
+X70 net11 inn GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X71 net15 inp GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X72 GND net17 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X73 pos a_6892280_n1951526# GND sky130_fd_pr__res_xhigh_po w=690000u l=2.4e+07u
+X74 VDD mir bg_out VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=3e+06u l=2e+06u M=8
+X75 GND GND GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X76 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X77 GND net18 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X78 GND net18 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X79 GND GND GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X80 GND net17 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X81 net11 net18 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X82 GND net18 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X83 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X84 GND GND GND sky130_fd_pr__res_xhigh_po w=690000u l=2.4e+07u
+X85 a_6840912_n1929809# a_6889745_n1972062# GND sky130_fd_pr__res_xhigh_po w=690000u l=4.5e+06u
+X86 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X87 VDD a_6827544_n1967186# a_6827544_n1967186# VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=420000u l=3e+06u M=2
+X88 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X89 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X90 net9 net15 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X91 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X92 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X93 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X94 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X95 GND net17 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X96 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X97 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X98 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X99 net15 net17 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X100 a_6893824_n1946282# pos GND sky130_fd_pr__res_xhigh_po w=690000u l=2.4e+07u
+X101 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X102 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X103 GND net18 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X104 GND net18 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X105 GND net17 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X106 GND a_6893824_n1946282# GND sky130_fd_pr__res_xhigh_po w=690000u l=2.4e+07u
+X107 a_6893824_n1946282# pos GND sky130_fd_pr__res_xhigh_po w=690000u l=2.4e+07u
+X108 GND net18 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X109 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X110 GND GND GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X111 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X112 GND net17 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X113 GND GND GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X114 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X115 net15 inp GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X116 net9 net15 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X117 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X118 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X119 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X120 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X121 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X122 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X123 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X124 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X125 bg_out net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X126 GND net17 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X127 pos a_6892280_n1951526# GND sky130_fd_pr__res_xhigh_po w=690000u l=2.4e+07u
+X128 GND net18 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X129 GND net17 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X130 GND net18 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X131 GND net18 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X132 GND net17 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X133 a_6892280_n1951526# ldo_out GND sky130_fd_pr__res_xhigh_po w=690000u l=2.4e+07u
+X134 GND net17 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X135 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X136 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X137 a_6881543_n1973365# a_6889745_n1972062# sky130_fd_pr__cap_mim_m3_1 l=5e+07u w=5e+07u
+X138 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X139 GND GND net11 sky130_fd_pr__pnp_05v5 area=0p
+X140 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X141 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X142 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X143 net9 net15 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X144 a_6892280_n1951526# ldo_out GND sky130_fd_pr__res_xhigh_po w=690000u l=2.4e+07u
+X145 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X146 a_6892280_n1951526# ldo_out GND sky130_fd_pr__res_xhigh_po w=690000u l=2.4e+07u
+X147 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X148 net11 inn GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X149 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X150 pos a_6892280_n1951526# GND sky130_fd_pr__res_xhigh_po w=690000u l=2.4e+07u
 .ends
 
-.subckt sky130_fd_sc_hvl__buf_8 A VGND VNB VPB VPWR X
-X0 X a_45_443# VGND VNB sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=750000u l=500000u
-X1 VGND a_45_443# X VNB sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=750000u l=500000u
-X2 X a_45_443# VPWR VPB sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1.5e+06u l=500000u
-X3 a_45_443# A VGND VNB sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=750000u l=500000u
-X4 X a_45_443# VPWR VPB sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1.5e+06u l=500000u
-X5 VPWR a_45_443# X VPB sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1.5e+06u l=500000u
-X6 VGND A a_45_443# VNB sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=750000u l=500000u
-X7 X a_45_443# VGND VNB sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=750000u l=500000u
-X8 VPWR A a_45_443# VPB sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1.5e+06u l=500000u
-X9 VPWR A a_45_443# VPB sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1.5e+06u l=500000u
-X10 VPWR a_45_443# X VPB sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1.5e+06u l=500000u
-X11 X a_45_443# VGND VNB sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=750000u l=500000u
-X12 VGND a_45_443# X VNB sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=750000u l=500000u
-X13 VPWR a_45_443# X VPB sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1.5e+06u l=500000u
-X14 X a_45_443# VPWR VPB sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1.5e+06u l=500000u
-X15 VGND A a_45_443# VNB sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=750000u l=500000u
-X16 VGND a_45_443# X VNB sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=750000u l=500000u
-X17 X a_45_443# VPWR VPB sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1.5e+06u l=500000u
-X18 VGND a_45_443# X VNB sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=750000u l=500000u
-X19 X a_45_443# VGND VNB sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=750000u l=500000u
-X20 VPWR a_45_443# X VPB sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1.5e+06u l=500000u
-X21 a_45_443# A VPWR VPB sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1.5e+06u l=500000u
+.subckt nmos5d10 a_1264_0# a_1106_0# w_n26_n26# a_790_0# a_474_0# a_632_0# a_158_0#
++ a_316_0# a_58_n26# a_948_0# a_0_0#
+X0 a_632_0# a_58_n26# a_474_0# w_n26_n26# sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1e+07u l=500000u
+X1 a_1264_0# a_58_n26# a_1106_0# w_n26_n26# sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1e+07u l=500000u
+X2 a_316_0# a_58_n26# a_158_0# w_n26_n26# sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1e+07u l=500000u
+X3 a_1106_0# a_58_n26# a_948_0# w_n26_n26# sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1e+07u l=500000u
+X4 a_790_0# a_58_n26# a_632_0# w_n26_n26# sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1e+07u l=500000u
+X5 a_158_0# a_58_n26# a_0_0# w_n26_n26# sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1e+07u l=500000u
+X6 a_948_0# a_58_n26# a_790_0# w_n26_n26# sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1e+07u l=500000u
+X7 a_474_0# a_58_n26# a_316_0# w_n26_n26# sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1e+07u l=500000u
 .ends
 
-.subckt sky130_fd_pr__pfet_g5v0d10v5_ZEUEFZ a_n683_n200# a_n189_n297# a_29_n297# a_189_n200#
-+ a_n901_n200# a_247_n297# a_n407_n297# a_465_n297# a_407_n200# a_n625_n297# a_683_n297#
-+ a_625_n200# a_n843_n297# w_n1101_n497# a_843_n200# a_n29_n200# a_n247_n200# a_n465_n200#
-+ VSUBS
-X0 a_n247_n200# a_n407_n297# a_n465_n200# w_n1101_n497# sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=2e+06u l=800000u
-X1 a_843_n200# a_683_n297# a_625_n200# w_n1101_n497# sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=2e+06u l=800000u
-X2 a_407_n200# a_247_n297# a_189_n200# w_n1101_n497# sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=2e+06u l=800000u
-X3 a_189_n200# a_29_n297# a_n29_n200# w_n1101_n497# sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=2e+06u l=800000u
-X4 a_n465_n200# a_n625_n297# a_n683_n200# w_n1101_n497# sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=2e+06u l=800000u
-X5 a_625_n200# a_465_n297# a_407_n200# w_n1101_n497# sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=2e+06u l=800000u
-X6 a_n29_n200# a_n189_n297# a_n247_n200# w_n1101_n497# sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=2e+06u l=800000u
-X7 a_n683_n200# a_n843_n297# a_n901_n200# w_n1101_n497# sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=2e+06u l=800000u
+.subckt nmos5d10$1 w_n26_n26# a_474_0# a_632_0# a_158_0# a_316_0# a_58_n26# a_0_0#
+X0 a_632_0# a_58_n26# a_474_0# w_n26_n26# sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=3e+06u l=500000u
+X1 a_316_0# a_58_n26# a_158_0# w_n26_n26# sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=3e+06u l=500000u
+X2 a_158_0# a_58_n26# a_0_0# w_n26_n26# sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=3e+06u l=500000u
+X3 a_474_0# a_58_n26# a_316_0# w_n26_n26# sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=3e+06u l=500000u
 .ends
 
-.subckt sky130_fd_pr__nfet_g5v0d10v5_TGFUGS a_n792_n200# a_298_n200# a_516_n200# a_734_n200#
-+ w_n962_n458# a_138_n288# a_n298_n288# a_80_n200# a_356_n288# a_n516_n288# a_574_n288#
-+ a_n734_n288# a_n138_n200# a_n356_n200# a_n574_n200# a_n80_n288#
-X0 a_n574_n200# a_n734_n288# a_n792_n200# w_n962_n458# sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=2e+06u l=800000u
-X1 a_734_n200# a_574_n288# a_516_n200# w_n962_n458# sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=2e+06u l=800000u
-X2 a_298_n200# a_138_n288# a_80_n200# w_n962_n458# sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=2e+06u l=800000u
-X3 a_n138_n200# a_n298_n288# a_n356_n200# w_n962_n458# sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=2e+06u l=800000u
-X4 a_n356_n200# a_n516_n288# a_n574_n200# w_n962_n458# sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=2e+06u l=800000u
-X5 a_516_n200# a_356_n288# a_298_n200# w_n962_n458# sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=2e+06u l=800000u
-X6 a_80_n200# a_n80_n288# a_n138_n200# w_n962_n458# sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=2e+06u l=800000u
+.subckt mimcap_1 m3_0_0# c1_100_100# VSUBS
+X0 c1_100_100# m3_0_0# sky130_fd_pr__cap_mim_m3_1 l=1.6e+07u w=1.6e+07u
 .ends
 
-.subckt sky130_fd_pr__res_xhigh_po_0p69_S5N9F3 a_n1806_2500# a_n4122_n2932# a_n5280_2500#
-+ a_2054_n2932# a_896_n2932# a_4756_2500# a_3598_n2932# a_3212_2500# a_n3736_n2932#
-+ a_1668_n2932# a_n1806_n2932# a_5142_n2932# a_896_2500# a_510_n2932# a_n3350_2500#
-+ a_n4508_2500# a_3212_n2932# a_n4894_2500# a_1282_2500# w_n5446_n3098# a_4756_n2932#
-+ a_2826_2500# a_2826_n2932# a_n2192_n2932# a_n1034_2500# a_n2578_2500# a_n1420_2500#
-+ a_n2964_2500# a_n648_n2932# a_n648_2500# a_n5280_n2932# a_n3350_n2932# a_4370_2500#
-+ a_1282_n2932# a_124_n2932# a_n1420_n2932# a_n4894_n2932# a_124_2500# a_n2964_n2932#
-+ a_n4122_2500# a_2054_2500# a_510_2500# a_n4508_n2932# a_4370_n2932# a_3598_2500#
-+ a_3984_2500# a_2440_n2932# a_2440_2500# a_3984_n2932# a_n2192_2500# a_n3736_2500#
-+ a_1668_2500# a_n262_n2932# a_n262_2500# a_n1034_n2932# a_5142_2500# a_n2578_n2932#
-X0 a_n1420_n2932# a_n1420_2500# w_n5446_n3098# sky130_fd_pr__res_xhigh_po_0p69 l=2.5e+07u
-X1 a_n2578_n2932# a_n2578_2500# w_n5446_n3098# sky130_fd_pr__res_xhigh_po_0p69 l=2.5e+07u
-X2 a_n1806_n2932# a_n1806_2500# w_n5446_n3098# sky130_fd_pr__res_xhigh_po_0p69 l=2.5e+07u
-X3 a_3212_n2932# a_3212_2500# w_n5446_n3098# sky130_fd_pr__res_xhigh_po_0p69 l=2.5e+07u
-X4 a_3598_n2932# a_3598_2500# w_n5446_n3098# sky130_fd_pr__res_xhigh_po_0p69 l=2.5e+07u
-X5 a_n2964_n2932# a_n2964_2500# w_n5446_n3098# sky130_fd_pr__res_xhigh_po_0p69 l=2.5e+07u
-X6 a_2826_n2932# a_2826_2500# w_n5446_n3098# sky130_fd_pr__res_xhigh_po_0p69 l=2.5e+07u
-X7 a_4370_n2932# a_4370_2500# w_n5446_n3098# sky130_fd_pr__res_xhigh_po_0p69 l=2.5e+07u
-X8 a_3984_n2932# a_3984_2500# w_n5446_n3098# sky130_fd_pr__res_xhigh_po_0p69 l=2.5e+07u
-X9 a_n262_n2932# a_n262_2500# w_n5446_n3098# sky130_fd_pr__res_xhigh_po_0p69 l=2.5e+07u
-X10 a_n3350_n2932# a_n3350_2500# w_n5446_n3098# sky130_fd_pr__res_xhigh_po_0p69 l=2.5e+07u
-X11 a_n4122_n2932# a_n4122_2500# w_n5446_n3098# sky130_fd_pr__res_xhigh_po_0p69 l=2.5e+07u
-X12 a_n3736_n2932# a_n3736_2500# w_n5446_n3098# sky130_fd_pr__res_xhigh_po_0p69 l=2.5e+07u
-X13 a_5142_n2932# a_5142_2500# w_n5446_n3098# sky130_fd_pr__res_xhigh_po_0p69 l=2.5e+07u
-X14 a_n4894_n2932# a_n4894_2500# w_n5446_n3098# sky130_fd_pr__res_xhigh_po_0p69 l=2.5e+07u
-X15 a_1282_n2932# a_1282_2500# w_n5446_n3098# sky130_fd_pr__res_xhigh_po_0p69 l=2.5e+07u
-X16 a_4756_n2932# a_4756_2500# w_n5446_n3098# sky130_fd_pr__res_xhigh_po_0p69 l=2.5e+07u
-X17 a_124_n2932# a_124_2500# w_n5446_n3098# sky130_fd_pr__res_xhigh_po_0p69 l=2.5e+07u
-X18 a_510_n2932# a_510_2500# w_n5446_n3098# sky130_fd_pr__res_xhigh_po_0p69 l=2.5e+07u
-X19 a_896_n2932# a_896_2500# w_n5446_n3098# sky130_fd_pr__res_xhigh_po_0p69 l=2.5e+07u
-X20 a_n5280_n2932# a_n5280_2500# w_n5446_n3098# sky130_fd_pr__res_xhigh_po_0p69 l=2.5e+07u
-X21 a_n648_n2932# a_n648_2500# w_n5446_n3098# sky130_fd_pr__res_xhigh_po_0p69 l=2.5e+07u
-X22 a_n1034_n2932# a_n1034_2500# w_n5446_n3098# sky130_fd_pr__res_xhigh_po_0p69 l=2.5e+07u
-X23 a_n4508_n2932# a_n4508_2500# w_n5446_n3098# sky130_fd_pr__res_xhigh_po_0p69 l=2.5e+07u
-X24 a_n2192_n2932# a_n2192_2500# w_n5446_n3098# sky130_fd_pr__res_xhigh_po_0p69 l=2.5e+07u
-X25 a_2054_n2932# a_2054_2500# w_n5446_n3098# sky130_fd_pr__res_xhigh_po_0p69 l=2.5e+07u
-X26 a_1668_n2932# a_1668_2500# w_n5446_n3098# sky130_fd_pr__res_xhigh_po_0p69 l=2.5e+07u
-X27 a_2440_n2932# a_2440_2500# w_n5446_n3098# sky130_fd_pr__res_xhigh_po_0p69 l=2.5e+07u
+.subckt pmos5d10 a_58_n166# a_2116_0# w_n144_n310# a_1058_0# a_0_0# VSUBS
+X0 a_2116_0# a_58_n166# a_1058_0# w_n144_n310# sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=420000u l=5e+06u
+X1 a_1058_0# a_58_n166# a_0_0# w_n144_n310# sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=420000u l=5e+06u
 .ends
 
-.subckt sky130_fd_pr__pfet_g5v0d10v5_3YBPVB a_n80_n297# a_80_n200# w_n338_n497# a_n138_n200#
-+ VSUBS
-X0 a_80_n200# a_n80_n297# a_n138_n200# w_n338_n497# sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=2e+06u l=800000u
-.ends
-
-.subckt sky130_fd_sc_hvl__schmittbuf_1 A VGND VNB VPB VPWR X
-X0 X a_117_181# VGND VNB sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=750000u l=500000u
-X1 a_217_207# a_117_181# a_64_207# VNB sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=420000u l=500000u
-X2 VPWR A a_231_463# VPB sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=750000u l=500000u
-X3 VGND A a_217_207# VNB sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=420000u l=500000u
-X4 a_64_207# VPWR VPB sky130_fd_pr__res_generic_pd__hv w=290000u l=3.11e+06u
-X5 X a_117_181# VPWR VPB sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1.5e+06u l=500000u
-X6 a_231_463# A a_117_181# VPB sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=750000u l=500000u
-X7 a_231_463# a_117_181# a_78_463# VPB sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=750000u l=500000u
-X8 a_217_207# A a_117_181# VNB sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=420000u l=500000u
-X9 a_78_463# VGND VNB sky130_fd_pr__res_generic_nd__hv w=290000u l=1.355e+06u
-.ends
-
-.subckt sky130_fd_pr__pfet_g5v0d10v5_YUHPXE a_n80_n297# a_80_n200# w_n338_n497# a_n138_n200#
-+ VSUBS
-X0 a_80_n200# a_n80_n297# a_n138_n200# w_n338_n497# sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=2e+06u l=800000u
-.ends
-
-.subckt sky130_fd_pr__nfet_g5v0d10v5_PKVMTM w_n308_n458# a_80_n200# a_n138_n200# a_n80_n288#
-X0 a_80_n200# a_n80_n288# a_n138_n200# w_n308_n458# sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=2e+06u l=800000u
-.ends
-
-.subckt sky130_fd_pr__nfet_g5v0d10v5_ZK8HQC w_n308_n458# a_80_n200# a_n138_n200# a_n80_n288#
-X0 a_80_n200# a_n80_n288# a_n138_n200# w_n308_n458# sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=2e+06u l=800000u
-.ends
-
-.subckt sky130_fd_pr__cap_mim_m3_1_WRT4AW c1_n3036_n3000# m3_n3136_n3100# VSUBS
-X0 c1_n3036_n3000# m3_n3136_n3100# sky130_fd_pr__cap_mim_m3_1 l=3e+07u w=3e+07u
-.ends
-
-.subckt sky130_fd_pr__pfet_g5v0d10v5_YEUEBV a_n792_n200# a_138_n297# a_n298_n297#
-+ a_298_n200# a_356_n297# a_n516_n297# a_574_n297# a_516_n200# a_n734_n297# a_734_n200#
-+ a_n80_n297# a_80_n200# a_n138_n200# a_n356_n200# a_n574_n200# w_n992_n497# VSUBS
-X0 a_80_n200# a_n80_n297# a_n138_n200# w_n992_n497# sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=2e+06u l=800000u
-X1 a_n574_n200# a_n734_n297# a_n792_n200# w_n992_n497# sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=2e+06u l=800000u
-X2 a_734_n200# a_574_n297# a_516_n200# w_n992_n497# sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=2e+06u l=800000u
-X3 a_298_n200# a_138_n297# a_80_n200# w_n992_n497# sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=2e+06u l=800000u
-X4 a_n138_n200# a_n298_n297# a_n356_n200# w_n992_n497# sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=2e+06u l=800000u
-X5 a_n356_n200# a_n516_n297# a_n574_n200# w_n992_n497# sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=2e+06u l=800000u
-X6 a_516_n200# a_356_n297# a_298_n200# w_n992_n497# sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=2e+06u l=800000u
-.ends
-
-.subckt sky130_fd_pr__pfet_g5v0d10v5_YUHPBG a_n80_n297# a_80_n200# w_n338_n497# a_n138_n200#
-+ VSUBS
-X0 a_80_n200# a_n80_n297# a_n138_n200# w_n338_n497# sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=2e+06u l=800000u
-.ends
-
-.subckt sky130_fd_sc_hvl__inv_8 A VGND VNB VPB VPWR Y
-X0 VGND A Y VNB sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=750000u l=500000u
-X1 Y A VGND VNB sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=750000u l=500000u
-X2 VGND A Y VNB sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=750000u l=500000u
-X3 Y A VPWR VPB sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1.5e+06u l=500000u
-X4 VPWR A Y VPB sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1.5e+06u l=500000u
-X5 Y A VGND VNB sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=750000u l=500000u
-X6 VGND A Y VNB sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=750000u l=500000u
-X7 Y A VGND VNB sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=750000u l=500000u
-X8 VPWR A Y VPB sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1.5e+06u l=500000u
-X9 Y A VPWR VPB sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1.5e+06u l=500000u
-X10 VPWR A Y VPB sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1.5e+06u l=500000u
-X11 Y A VPWR VPB sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1.5e+06u l=500000u
-X12 VGND A Y VNB sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=750000u l=500000u
-X13 Y A VGND VNB sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=750000u l=500000u
-X14 Y A VPWR VPB sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1.5e+06u l=500000u
-X15 VPWR A Y VPB sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1.5e+06u l=500000u
-.ends
-
-.subckt example_por vdd3v3 vdd1v8 vss porb_h por_l porb_l
-Xsky130_fd_pr__cap_mim_m3_2_W5U4AW_0 vss sky130_fd_sc_hvl__schmittbuf_1_0/A vss sky130_fd_pr__cap_mim_m3_2_W5U4AW
-Xsky130_fd_sc_hvl__buf_8_1 sky130_fd_sc_hvl__inv_8_0/A vss vss vdd1v8 vdd1v8 porb_l
-+ sky130_fd_sc_hvl__buf_8
-Xsky130_fd_pr__pfet_g5v0d10v5_ZEUEFZ_0 m1_502_7653# m1_502_7653# m1_502_7653# m1_502_7653#
-+ vdd3v3 m1_502_7653# m1_502_7653# m1_502_7653# vdd3v3 m1_502_7653# m1_502_7653# m1_502_7653#
-+ m1_502_7653# vdd3v3 vdd3v3 vdd3v3 m1_502_7653# vdd3v3 vss sky130_fd_pr__pfet_g5v0d10v5_ZEUEFZ
-Xsky130_fd_pr__nfet_g5v0d10v5_TGFUGS_0 m1_721_6815# vss m1_721_6815# vss vss m1_721_6815#
-+ m1_721_6815# m1_721_6815# m1_721_6815# m1_721_6815# m1_721_6815# m1_721_6815# vss
-+ m1_721_6815# vss m1_721_6815# sky130_fd_pr__nfet_g5v0d10v5_TGFUGS
-Xsky130_fd_pr__res_xhigh_po_0p69_S5N9F3_0 li_3322_5813# li_1391_165# vss li_7567_165#
-+ li_6023_165# vdd3v3 li_9111_165# li_8726_5813# li_1391_165# li_6795_165# li_3707_165#
-+ vss li_6410_5813# li_6023_165# li_1778_5813# li_1006_5813# li_8339_165# vss li_6410_5813#
-+ vss li_9883_165# li_7954_5813# li_8339_165# li_2935_165# li_4094_5813# li_2550_5813#
-+ li_4094_5813# li_2550_5813# li_4479_165# li_4866_5813# vss li_2163_165# li_9498_5813#
-+ li_6795_165# li_5251_165# li_3707_165# li_619_165# li_5638_5813# li_2163_165# li_1006_5813#
-+ li_7182_5813# li_5638_5813# li_619_165# li_9883_165# li_8726_5813# li_9498_5813#
-+ li_7567_165# li_7954_5813# li_9111_165# li_3322_5813# li_1778_5813# li_7182_5813#
-+ li_5251_165# li_4866_5813# li_4479_165# vss li_2935_165# sky130_fd_pr__res_xhigh_po_0p69_S5N9F3
-Xsky130_fd_pr__pfet_g5v0d10v5_3YBPVB_0 m1_185_6573# m1_721_6815# vdd3v3 m1_2993_7658#
-+ vss sky130_fd_pr__pfet_g5v0d10v5_3YBPVB
-Xsky130_fd_sc_hvl__schmittbuf_1_0 sky130_fd_sc_hvl__schmittbuf_1_0/A vss vss vdd3v3
-+ vdd3v3 sky130_fd_sc_hvl__inv_8_0/A sky130_fd_sc_hvl__schmittbuf_1
-Xsky130_fd_pr__pfet_g5v0d10v5_3YBPVB_1 m1_2756_6573# m1_4283_8081# vdd3v3 m1_2756_6573#
-+ vss sky130_fd_pr__pfet_g5v0d10v5_3YBPVB
-Xsky130_fd_pr__pfet_g5v0d10v5_3YBPVB_2 m1_2756_6573# sky130_fd_sc_hvl__schmittbuf_1_0/A
-+ vdd3v3 m1_6249_7690# vss sky130_fd_pr__pfet_g5v0d10v5_3YBPVB
-Xsky130_fd_pr__pfet_g5v0d10v5_3YBPVB_3 m1_185_6573# m1_502_7653# vdd3v3 m1_185_6573#
-+ vss sky130_fd_pr__pfet_g5v0d10v5_3YBPVB
-Xsky130_fd_pr__pfet_g5v0d10v5_YUHPXE_0 m1_4283_8081# m1_6249_7690# vdd3v3 vdd3v3 vss
-+ sky130_fd_pr__pfet_g5v0d10v5_YUHPXE
-Xsky130_fd_pr__nfet_g5v0d10v5_PKVMTM_0 vss m1_2756_6573# vss m1_721_6815# sky130_fd_pr__nfet_g5v0d10v5_PKVMTM
-Xsky130_fd_pr__nfet_g5v0d10v5_ZK8HQC_1 vss m1_185_6573# vss li_2550_5813# sky130_fd_pr__nfet_g5v0d10v5_ZK8HQC
-Xsky130_fd_pr__cap_mim_m3_1_WRT4AW_0 sky130_fd_sc_hvl__schmittbuf_1_0/A vss vss sky130_fd_pr__cap_mim_m3_1_WRT4AW
-Xsky130_fd_pr__pfet_g5v0d10v5_YEUEBV_0 vdd3v3 m1_4283_8081# m1_4283_8081# m1_4283_8081#
-+ m1_4283_8081# m1_4283_8081# m1_4283_8081# vdd3v3 m1_4283_8081# m1_4283_8081# m1_4283_8081#
-+ vdd3v3 m1_4283_8081# vdd3v3 m1_4283_8081# vdd3v3 vss sky130_fd_pr__pfet_g5v0d10v5_YEUEBV
-Xsky130_fd_pr__pfet_g5v0d10v5_YUHPBG_0 m1_502_7653# m1_2993_7658# vdd3v3 vdd3v3 vss
-+ sky130_fd_pr__pfet_g5v0d10v5_YUHPBG
-Xsky130_fd_sc_hvl__inv_8_0 sky130_fd_sc_hvl__inv_8_0/A vss vss vdd1v8 vdd1v8 por_l
-+ sky130_fd_sc_hvl__inv_8
-Xsky130_fd_sc_hvl__buf_8_0 sky130_fd_sc_hvl__inv_8_0/A vss vss vdd3v3 vdd3v3 porb_h
-+ sky130_fd_sc_hvl__buf_8
-.ends
-
-.subckt user_analog_proj_example example_por_0/por_l VSUBS example_por_1/por_l example_por_0/vdd1v8
-+ example_por_1/vdd3v3 example_por_1/porb_l example_por_0/vdd3v3 example_por_1/porb_h
-+ example_por_0/porb_l example_por_0/porb_h example_por_1/vdd1v8
-Xexample_por_0 example_por_0/vdd3v3 example_por_0/vdd1v8 VSUBS example_por_0/porb_h
-+ example_por_0/por_l example_por_0/porb_l example_por
-Xexample_por_1 example_por_1/vdd3v3 example_por_1/vdd1v8 VSUBS example_por_1/porb_h
-+ example_por_1/por_l example_por_1/porb_l example_por
+.subckt ldo_v2 VDD GND bg_out vb net4 net5 mir en net9 net11 net15 inn inp net17 net18
++ net19 pos net6 ldo_out
+Xnmos5d10_0 GND m1_6830233_n1966360# GND m1_6830233_n1966360# m1_6830233_n1966360#
++ GND m1_6830233_n1966360# GND bg_out GND GND nmos5d10
+Xnmos5d10$1_0 GND inn VDD inn VDD m1_6830233_n1966360# VDD nmos5d10$1
+Xmimcap_1_0 GND mir GND mimcap_1
+Xpmos5d10_0 bg_out VDD VDD m1_6830233_n1966360# VDD GND pmos5d10
+X0 GND net17 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X1 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X2 ldo_out a_6840912_n1929809# VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1e+07u l=500000u M=800
+X3 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X4 GND net18 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X5 net6 mir VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=3e+06u l=2e+06u M=8
+X6 net5 inp net4 GND sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=3e+06u l=1e+06u M=8
+X7 GND a_6893824_n1946282# GND sky130_fd_pr__res_xhigh_po w=690000u l=2.4e+07u
+X8 mir net5 VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=3e+06u l=2e+06u M=4
+X9 vb vb GND GND sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1e+06u l=1e+06u M=4
+X10 net4 inn mir GND sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=3e+06u l=1e+06u M=8
+X11 GND net17 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X12 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X13 GND net6 net4 GND sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=5e+06u l=2e+06u M=4
+X14 a_6881369_n1978314# vb GND GND sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1e+06u l=1e+06u M=8
+X15 GND net18 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X16 a_6840912_n1929809# a_6881543_n1973365# VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=3e+06u l=1.2e+06u M=12
+X17 GND net18 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X18 net6 net6 GND GND sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=5e+06u l=2e+06u M=4
+X19 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X20 a_6892280_n1951526# ldo_out GND sky130_fd_pr__res_xhigh_po w=690000u l=2.4e+07u
+X21 VDD mir inp VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=3e+06u l=2e+06u M=8
+X22 a_6881543_n1973365# pos a_6881369_n1978314# GND sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=2e+06u l=1e+06u M=8
+X23 GND net17 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X24 a_6892280_n1951526# ldo_out GND sky130_fd_pr__res_xhigh_po w=690000u l=2.4e+07u
+X25 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X26 net15 inp GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X27 net11 inn GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X28 a_6881303_n1973391# bg_out a_6881369_n1978314# GND sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=2e+06u l=1e+06u M=8
+X29 a_6892280_n1951526# ldo_out GND sky130_fd_pr__res_xhigh_po w=690000u l=2.4e+07u
+X30 a_6840912_n1929809# vb GND GND sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1e+06u l=1e+06u M=12
+X31 a_6881303_n1973391# a_6881303_n1973391# VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=3e+06u l=1.2e+06u M=4
+X32 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X33 GND GND net9 sky130_fd_pr__pnp_05v5 area=0p M=-nan
+X34 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X35 a_6892280_n1951526# ldo_out GND sky130_fd_pr__res_xhigh_po w=690000u l=2.4e+07u
+X36 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X37 net9 net15 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X38 vb mir VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=3e+06u l=2e+06u M=4
+X39 VDD net5 net5 VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=3e+06u l=2e+06u M=4
+X40 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X41 VDD mir inn VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=3e+06u l=2e+06u M=8
+X42 GND a_6893824_n1946282# GND sky130_fd_pr__res_xhigh_po w=690000u l=2.4e+07u
+X43 GND net18 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X44 GND net18 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X45 GND net17 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X46 VDD a_6881303_n1973391# a_6881543_n1973365# VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=3e+06u l=1.2e+06u M=4
+X47 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X48 GND net17 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X49 GND net18 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X50 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X51 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X52 a_6892280_n1951526# ldo_out GND sky130_fd_pr__res_xhigh_po w=690000u l=2.4e+07u
+X53 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X54 GND net17 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X55 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X56 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X57 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X58 GND GND GND sky130_fd_pr__res_xhigh_po w=690000u l=2.4e+07u
+X59 net9 net15 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X60 VDD en mir VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=420000u l=500000u M=2
+X61 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X62 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X63 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X64 net9 net15 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X65 GND a_6893824_n1946282# GND sky130_fd_pr__res_xhigh_po w=690000u l=2.4e+07u
+X66 net11 inn GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X67 net15 inp GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X68 GND net17 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X69 pos a_6892280_n1951526# GND sky130_fd_pr__res_xhigh_po w=690000u l=2.4e+07u
+X70 VDD mir bg_out VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=3e+06u l=2e+06u M=8
+X71 GND GND GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X72 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X73 GND net18 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X74 GND net18 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X75 GND GND GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X76 GND net17 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X77 net11 net18 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X78 GND net18 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X79 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X80 GND GND GND sky130_fd_pr__res_xhigh_po w=690000u l=2.4e+07u
+X81 a_6840912_n1929809# a_6889745_n1972062# GND sky130_fd_pr__res_xhigh_po w=690000u l=4.5e+06u
+X82 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X83 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X84 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X85 net9 net15 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X86 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X87 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X88 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X89 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X90 GND net17 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X91 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X92 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X93 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X94 net15 net17 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X95 a_6893824_n1946282# pos GND sky130_fd_pr__res_xhigh_po w=690000u l=2.4e+07u
+X96 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X97 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X98 GND net18 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X99 GND net18 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X100 GND net17 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X101 GND a_6893824_n1946282# GND sky130_fd_pr__res_xhigh_po w=690000u l=2.4e+07u
+X102 a_6893824_n1946282# pos GND sky130_fd_pr__res_xhigh_po w=690000u l=2.4e+07u
+X103 GND net18 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X104 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X105 GND GND GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X106 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X107 GND net17 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X108 GND GND GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X109 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X110 net15 inp GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X111 net9 net15 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X112 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X113 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X114 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X115 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X116 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X117 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X118 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X119 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X120 bg_out net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X121 GND net17 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X122 pos a_6892280_n1951526# GND sky130_fd_pr__res_xhigh_po w=690000u l=2.4e+07u
+X123 GND net18 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X124 GND net17 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X125 GND net18 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X126 GND net18 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X127 GND net17 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X128 a_6892280_n1951526# ldo_out GND sky130_fd_pr__res_xhigh_po w=690000u l=2.4e+07u
+X129 GND net17 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X130 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X131 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X132 a_6881543_n1973365# a_6889745_n1972062# sky130_fd_pr__cap_mim_m3_1 l=5e+07u w=5e+07u
+X133 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X134 GND GND net11 sky130_fd_pr__pnp_05v5 area=0p
+X135 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X136 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X137 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X138 net9 net15 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X139 a_6892280_n1951526# ldo_out GND sky130_fd_pr__res_xhigh_po w=690000u l=2.4e+07u
+X140 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X141 a_6892280_n1951526# ldo_out GND sky130_fd_pr__res_xhigh_po w=690000u l=2.4e+07u
+X142 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X143 net11 inn GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X144 GND net19 GND sky130_fd_pr__res_xhigh_po w=690000u l=2.7e+07u
+X145 pos a_6892280_n1951526# GND sky130_fd_pr__res_xhigh_po w=690000u l=2.4e+07u
 .ends
 
 .subckt user_analog_project_wrapper gpio_analog[0] gpio_analog[10] gpio_analog[11]
@@ -326,7 +444,17 @@ Xexample_por_1 example_por_1/vdd3v3 example_por_1/vdd1v8 VSUBS example_por_1/por
 + wbs_dat_o[30] wbs_dat_o[31] wbs_dat_o[3] wbs_dat_o[4] wbs_dat_o[5] wbs_dat_o[6]
 + wbs_dat_o[7] wbs_dat_o[8] wbs_dat_o[9] wbs_sel_i[0] wbs_sel_i[1] wbs_sel_i[2] wbs_sel_i[3]
 + wbs_stb_i wbs_we_i
-Xuser_analog_proj_example_0 io_out[16] vssa1 io_out[12] vccd1 vdda1 io_out[11] io_clamp_high[0]
-+ gpio_analog[3] io_out[15] gpio_analog[7] vccd1 user_analog_proj_example
+
+Xldo_v1_0 ldo_v1_0/bg_out io_analog[0] ldo_v1_0/vb ldo_v1_0/net4 ldo_v1_0/net5 ldo_v1_0/mir
++ io_in_3v3[14] ldo_v1_0/net9 ldo_v1_0/net11 ldo_v1_0/net15 ldo_v1_0/inn ldo_v1_0/inp
++ ldo_v1_0/net17 ldo_v1_0/net18 ldo_v1_0/net19 ldo_v1_0/pos io_analog[5] ldo_v1_0/net6
++ io_analog[5] ldo_v1
+
+Xldo_v2_0 io_clamp_high[0] io_analog[0] ldo_v2_0/bg_out ldo_v2_0/vb ldo_v2_0/net4
++ ldo_v2_0/net5 ldo_v2_0/mir io_in_3v3[12] ldo_v2_0/net9 ldo_v2_0/net11 ldo_v2_0/net15
++ ldo_v2_0/inn ldo_v2_0/inp ldo_v2_0/net17 ldo_v2_0/net18 ldo_v2_0/net19 ldo_v2_0/pos
++ ldo_v2_0/net6 io_clamp_high[0] ldo_v2
+
+
 .ends
 
